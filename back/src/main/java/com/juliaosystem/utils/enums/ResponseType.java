@@ -8,6 +8,7 @@ public enum ResponseType {
     CREATED(1, MensajesRespuesta.CREADO.getMensaje(), true, HttpStatus.CREATED),
     UPDATED(2, MensajesRespuesta.ACTUALIZADO.getMensaje(), true, HttpStatus.OK),
     FALLO(3, MensajesRespuesta.FALLO.getMensaje(), false, HttpStatus.INTERNAL_SERVER_ERROR),
+    NO_ENCONTRADO(4,MensajesRespuesta.NO_ENCONTRADO.getMensaje(),false, HttpStatus.OK),
     USER_ISFOUND(5, MensajesRespuesta.USER_ISFOUND.getMensaje(), false, HttpStatus.OK),
     DELETED(9,MensajesRespuesta.DELETED.getMensaje(),true, HttpStatus.OK),
     GET(10,MensajesRespuesta.GET.getMensaje(),true,HttpStatus.OK);

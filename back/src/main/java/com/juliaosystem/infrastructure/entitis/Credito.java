@@ -1,12 +1,16 @@
 package com.juliaosystem.infrastructure.entitis;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Builder
-@Data
 public class Credito {
 
     @Id
@@ -18,7 +22,7 @@ public class Credito {
     private String descripcionDestino;
     private Boolean aprobado;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "linea_credito_id")
     private LineaCredito lineaCredito;
 

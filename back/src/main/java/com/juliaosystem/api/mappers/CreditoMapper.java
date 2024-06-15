@@ -9,7 +9,6 @@ import java.util.List;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.NullValueCheckStrategy;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -19,10 +18,16 @@ public interface CreditoMapper {
 
        DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 
+
+       @Mapping(target = "id", source = "cliente.id")
+       @Mapping(target = "lineaCredito", source = "credito.lineaCredito")
+       @Mapping(target = "aprobado", source = "credito.aprobado")
+       @Mapping(target = "descripcionDestino", source = "credito.descripcionDestino")
+       @Mapping(target = "plazo", source = "credito.plazo")
+       @Mapping(target = "valor", source = "credito.valor")
        @Mapping(target = "cliente.informacionLaboral.fechaVinculacion", source = "cliente.informacionLaboral.fechaVinculacion", qualifiedByName = "stringToLocalDateTime")
        Credito mapToEntity(ClientRequest source);
 
-       @Mapping(target = "informacionLaboral.fechaVinculacion", source = "informacionLaboral.fechaVinculacion", qualifiedByName = "localDateTimeToString")
        CreditoResponse mapToResponse(Credito source);
 
        List<CreditoResponse> mapToResponse(List<Credito> source);

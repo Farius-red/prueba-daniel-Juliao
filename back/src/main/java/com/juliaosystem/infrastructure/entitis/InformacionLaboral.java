@@ -3,15 +3,19 @@ package com.juliaosystem.infrastructure.entitis;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Builder
-@Data
 public class InformacionLaboral {
 
     @Id

@@ -1,7 +1,6 @@
 package com.juliaosystem.api.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.juliaosystem.infrastructure.entitis.ReferenciaPersonal;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

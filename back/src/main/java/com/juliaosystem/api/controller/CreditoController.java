@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/creditos")
-@Tag(name = "creditos", description = "Endpoints relacionados con el manejo de clientes")
+@Tag(name = "creditos", description = "Endpoints relacionados con el manejo de creditos")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*")
 public class CreditoController {
 
    private final CreditoService creditoService;
 
-    @Operation(summary = "add", description = "Permite agregar un cliente")
+    @Operation(summary = "add", description = "Permite agregar un credito")
     @PostMapping("/add")
     public ResponseEntity<PlantillaResponse<CreditoResponse>>add(
             @RequestBody ClientRequest request) {
@@ -27,7 +27,7 @@ public class CreditoController {
         return new ResponseEntity<>(response, response.getHttpStatus());
     }
 
-    @Operation(summary = "all users", description = "permite obtener lista de usuarios ")
+    @Operation(summary = "all creditos", description = "permite obtener lista de creditos ")
     @GetMapping("/all")
     public ResponseEntity<PlantillaResponse<CreditoResponse>> all() {
         var response = creditoService.all();

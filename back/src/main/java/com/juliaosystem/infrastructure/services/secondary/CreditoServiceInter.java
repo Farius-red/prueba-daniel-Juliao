@@ -11,5 +11,5 @@ public interface CreditoServiceInter {
 
      PlantillaResponse<CreditoResponse> all();
 
-     Boolean byId(Long id);
+     boolean byId(Long id);
 }

@@ -2,7 +2,12 @@
 ** Requisitos **
 Se usa java 21
 Maven 3
-postgres
+sql server 
+ 
+
+# 1- Diseño de una solución en bases de datos
+
+ ![Texto alternativo](https://github.com/Farius-red/prueba-daniel-Juliao/blob/master/imgDocumentacion/ER.png)
 
 # Prueba de cobertura
 
@@ -98,7 +103,67 @@ DB_USERNAME=su usuario ;DB_PASSWORD=aqui la clave
 ![Texto alternativo](https://github.com/Farius-red/mcs-financial/blob/master/imgDocumentacion/intelliJ.png)
 
 # Curl enpoint 
- 
+
+**crear credito** 
+
+ curl -X POST \
+  http://localhost:8080/creditos/add \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "cliente": {
+            "id": 1,
+            "tipoDocumento": "CC",
+            "numeroDocumento": "1014267700",
+            "apellidos": "juliao nova",
+            "residencia": "bogota",
+            "ciudad": "bogota",
+            "telefono": "3186877469",
+            "informacionLaboral": {
+                "nitEmpresa": "1700200-6",
+                "nombreEmpresa": "prueba",
+                "direccion": "carrera 141a# 144 58",
+                "telefono": "3186877469",
+                "cargo": "desarrollador",
+                "fechaVinculacion": "2023-06-15 14:30"
+            },
+            "referenciasFamiliares": [
+                {
+                    "nombre": "dani",
+                    "direccion": "carrera 142",
+                    "telefono": "3186874774",
+                    "ciudad": "bogota",
+                    "email": "daniel.juliao.tecni@gmail.com",
+                    "parentesco": "hermano"
+                }
+            ],
+            "referenciasPersonales": [
+                {
+                    "valor": "prueba",
+                    "direccion": "carrera 128 #18-20",
+                    "telefono": "3186899901",
+                    "ciudad": "Bogota",
+                    "email": "prueba.tecni@gmail.com"
+                }
+            ]
+        },
+        "credito": {
+            "valor": 3000000,
+            "plazo": 72,
+            "descripcionDestino": "compra de productos",
+            "aprobado": false,
+            "lineaCredito": {
+                "nombre": "libre Inversion",
+                "valorMinimo": 100000,
+                "valorMaximo": 5000000,
+                "plazoMaximo": 72
+            }
+        }
+    }'
+
+**obtener lista de  credito** 
+curl -X GET \
+  http://localhost:8080/creditos/all \
+  -H 'Content-Type: application/json'
 
 
 ## Front

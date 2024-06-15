@@ -8,8 +8,8 @@ public enum MensajesRespuesta {
     GET("Se obtuvieron datos correctamente"),
     ACTUALIZADO("Actualizado correctamente"),
     FALLO("Algo salió mal"),
-
-    USER_ISFOUND("El Credito  ya se encuentra registrado"),
+    NO_ENCONTRADO("Verifique los datos del cliente no se encontro el id de ese cliente"),
+    USER_ISFOUND("Ya se encuentra registrado"),
 
     DELETED("Eliminado(a) correctamente");
 

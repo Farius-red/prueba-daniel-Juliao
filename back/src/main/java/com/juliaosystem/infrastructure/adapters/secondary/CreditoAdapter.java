@@ -36,8 +36,15 @@ public class CreditoAdapter implements CreditoServiceInter {
             return   userResponses.buildResponse(ResponseType.CREATED.getCode(),response);
         }catch (Exception e){
             abtractError.logError(e);
-            return   userResponses.buildResponse(ResponseType.FALLO.getCode(), CreditoResponse.builder().build());
+            return  validarErrorResponsellenarEntidades(e);
         }
+    }
+
+    private   PlantillaResponse<CreditoResponse> validarErrorResponsellenarEntidades(Exception e ){
+        abtractError.logError(e);
+        if (e.getMessage().contains("Unable to find"))
+            return  userResponses.buildResponse(ResponseType.NO_ENCONTRADO.getCode(), CreditoResponse.builder().build());
+        return  userResponses.buildResponse(ResponseType.FALLO.getCode(), CreditoResponse.builder().build());
     }
 
     @Override
@@ -54,7 +61,7 @@ public class CreditoAdapter implements CreditoServiceInter {
     }
 
     @Override
-    public Boolean byId(Long id) {
+    public boolean byId(Long id) {
             return creditoRepository.findById(id).isPresent();
     }
 
