@@ -5,7 +5,6 @@ target/
 !**/src/test/**/target/
 mvn/
 
-/front/template-test-ng/projects/template-test-ng/node_modules/
 /dist
 /tmp
 /out-tsc
@@ -73,3 +72,4 @@ build/
 
 ### VS Code ###
 .vscode/
+
