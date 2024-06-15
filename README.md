@@ -13,12 +13,12 @@ sql server
 
 imagen prueba de covertura de text unitarios junit y mockito 
 
-![Texto alternativo](https://github.com/Farius-red/prueba-users/blob/master/imgDocumentacion/jacoco.png)
+![Texto alternativo](https://github.com/Farius-red/prueba-daniel-Juliao/blob/master/imgDocumentacion/jacoco.png)
 
 # Arquitectura 
 
 
-![Texto alternativo](https://github.com/Farius-red/prueba-users/blob/master/imgDocumentacion/arquitectura.png)
+![Texto alternativo](https://github.com/Farius-red/prueba-daniel-Juliao/blob/master/imgDocumentacion/arquitectura.png)
 
 En el paquete de infraestructura  esta la logica del negocio separada por dos paquetes
 
@@ -37,7 +37,7 @@ Este se encarga de interactuar con la base de datos
 
 **paso 3**  instalar en maquina local jdk 21
 
-**paso 5**   instalar postgres
+**paso 5**   instalar sqlserver
 
 **paso 7** crear una  base de datos
 
@@ -72,7 +72,7 @@ java
 -DDB_PORT=aqui el puerto de conexión;
 -DDB_DATABASE=nombre de la base de datos ;
 -DDB_USERNAME=su usuario ;
--DDB_PASSWORD=su contraseña  -jar mcs-financial-v1.jar
+-DDB_PASSWORD=su contraseña  -jar "aqui el nombre del jar"
 
 **esto ejecutara la aplicación**
 
@@ -164,6 +164,49 @@ DB_USERNAME=su usuario ;DB_PASSWORD=aqui la clave
 curl -X GET \
   http://localhost:8080/creditos/all \
   -H 'Content-Type: application/json'
+
+**crear Cliente** 
+
+  curl -X POST \
+  http://localhost:8080/cliente/add \
+  -H 'Content-Type: application/json' \
+  -d '{
+        "id": 1,
+        "tipoDocumento": "CC",
+        "numeroDocumento": "1014267700",
+        "apellidos": "juliao nova",
+        "residencia": "bogota",
+        "ciudad": "bogota",
+        "telefono": "3186877469",
+        "informacionLaboral": {
+          "nitEmpresa": "1700200-6",
+          "nombreEmpresa": "prueba",
+          "direccion": "carrera 141a# 144 58",
+          "telefono": "3186877469",
+          "cargo": "desarrollador",
+          "fechaVinculacion": "2023-06-15 14:30"
+        },
+        "referenciasFamiliares": [
+          {
+            "nombre": "dani",
+            "direccion": "carrera 142",
+            "telefono": "3186874774",
+            "ciudad": "bogota",
+            "email": "daniel.juliao.tecni@gmail.com",
+            "parentesco": "hermano"
+          }
+        ],
+        "referenciasPersonales": [
+          {
+            "valor": "prueba",
+            "direccion": "carrera 128 #18-20",
+            "telefono": "3186899901",
+            "ciudad": "Bogota",
+            "email": "prueba.tecni@gmail.com"
+          }
+        ]
+      }'
+
 
 
 ## Front
