@@ -9,12 +9,6 @@ sql server
 
  ![Texto alternativo](https://github.com/Farius-red/prueba-daniel-Juliao/blob/master/imgDocumentacion/ER.png)
 
-# Prueba de cobertura
-
-imagen prueba de covertura de text unitarios junit y mockito 
-
-![Texto alternativo](https://github.com/Farius-red/prueba-daniel-Juliao/blob/master/imgDocumentacion/jacoco.png)
-
 # Arquitectura 
 
 
