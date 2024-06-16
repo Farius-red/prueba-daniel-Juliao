@@ -22,7 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],exports:[
     ReactiveFormsModule,
     MatTableModule,
@@ -36,7 +36,7 @@ import { MatCardModule } from '@angular/material/card';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
   ]
 })
 export class CoreModule { }

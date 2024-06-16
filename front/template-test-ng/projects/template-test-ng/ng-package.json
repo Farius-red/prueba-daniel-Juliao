@@ -3,5 +3,9 @@
   "dest": "../../dist/template-test-ng",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": [
+    "@angular/cdk",
+    "@angular/material"
+  ]
 }

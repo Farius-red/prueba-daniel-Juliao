@@ -1,8 +1,9 @@
 <mat-toolbar color="primary">
-    <span>Dashboard</span>
-  </mat-toolbar>
+  <span>Dashboard</span>
+</mat-toolbar>
   
-  <mat-grid-list cols="4" gutterSize="16px">
+  <!-- <mat-grid-list style="margin-top: 15%;" cols="3" gutterSize="16px">
+   
     @for (data of data; track data.title) {
         <mat-grid-tile [colspan]=1 [rowspan]=1>
             <mat-card class="dashboard-card">
@@ -15,6 +16,8 @@
             </mat-card>
           </mat-grid-tile>
       }
+  </mat-grid-list> -->
+
+<router-outlet></router-outlet>
   
-  </mat-grid-list>
   

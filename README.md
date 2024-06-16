@@ -215,9 +215,21 @@ Desarrollado en angular requisitos para correrlo
 
 node  v20.14.0
 npm version  10.7.0 
-angular version  18
+angular version  17
 
-ir ala carpeta front users  
+
+**paso 1** 
+ir ala carpeta front template-test-ng  
 ejecutar npm install 
-ng serve 
+
+
+**paso 2** 
+ir ala carpeta front/template-test-ng/projects/template-test-ng/
+ejecutar npm install 
+ejecutar ng build template-test-ng 
+
+
+**paso 3** 
+ir ala carpeta front/template-test-ng/projects/test-app-ng
+ejecutar ng serve 
 

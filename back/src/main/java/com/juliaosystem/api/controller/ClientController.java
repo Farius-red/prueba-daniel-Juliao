@@ -1,7 +1,6 @@
 package com.juliaosystem.api.controller;
 
 import com.juliaosystem.api.dtos.ClienteDTO;
-import com.juliaosystem.api.dtos.request.ClientRequest;
 import com.juliaosystem.api.dtos.response.ClientResponse;
 import com.juliaosystem.infrastructure.services.primary.ClientService;
 import com.juliaosystem.utils.PlantillaResponse;
